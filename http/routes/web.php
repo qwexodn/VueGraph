@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::any('/', 'onepagecontroller');
+Route::any('/{any}', 'onepagecontroller');
+
+Route::any('php/info', 'onepagecontroller@phpinfo');
